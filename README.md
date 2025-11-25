@@ -19,3 +19,14 @@ Encapsulation of object creation: clients don’t need to know which class to in
 Scalability: easy to add new product types.
 
 Clean MVC separation: the controller handles logic, the factory handles creation, and the view handles presentation.
+
+# 11/24/2025 Updates
+This update demonstrates the Strategy Design Pattern.
+The Interface FuelStrategy creates a base line the prevents hardcoding information, used by both TruckFuelStrategy and SportFuelStrategy. Different vehicles consume fuel differently.
+This allows vehicle behavior to change at runtime and keeps the system open for modification but closed for changes (Open/Closed Principle). Which we slightly went over today in class.
+
+Benefefits of Strategy Pattern
+
+Easier expansion, New cars or fuel behaviors can be added without changing existing code.
+
+Separation of concerns, Vehicle creation and behavior logic are modular.
