@@ -6,7 +6,12 @@
  */
 package edu.neumont.csc360.model;
 
+import edu.neumont.csc360.strategy.FuelStrategy;
+
 public interface Vehicle {
     String getType();
     int getHorsePower();
+
+    void setFuelStrategy(FuelStrategy strategy);
+    double computeFuelUsage(int distance);
 }

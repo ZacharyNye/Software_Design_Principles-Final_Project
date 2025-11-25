@@ -6,7 +6,11 @@
  */
 package edu.neumont.csc360.model;
 
+import edu.neumont.csc360.strategy.FuelStrategy;
+
 public class SportsCar implements Vehicle {
+    private FuelStrategy fuelStrategy;
+
     @Override
     public String getType() {
         return "Sports Car";
@@ -15,5 +19,15 @@ public class SportsCar implements Vehicle {
     @Override
     public int getHorsePower() {
         return 300;
+    }
+
+    @Override
+    public void setFuelStrategy(FuelStrategy strategy) {
+        this.fuelStrategy = strategy;
+    }
+
+    @Override
+    public double computeFuelUsage(int distance) {
+        return fuelStrategy.calculateFuelUsage(distance);
     }
 }

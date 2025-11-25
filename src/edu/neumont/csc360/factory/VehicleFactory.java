@@ -7,14 +7,20 @@
 package edu.neumont.csc360.factory;
 
 import edu.neumont.csc360.model.*;
+import edu.neumont.csc360.strategy.SportFuelStrategy;
+import edu.neumont.csc360.strategy.TruckFuelStrategy;
 
 public class VehicleFactory {
     public static Vehicle createVehicle(String type) {
         switch (type.toLowerCase()) {
             case "truck":
-                return new Truck();
+                Truck t  = new Truck();
+                t.setFuelStrategy(new TruckFuelStrategy());
+                return t;
             case "sportscar":
-                return new SportsCar();
+                SportsCar s = new SportsCar();
+                s.setFuelStrategy(new SportFuelStrategy());
+                return s;
             default:
                 throw new IllegalArgumentException("Unknown car type: " + type);
         }

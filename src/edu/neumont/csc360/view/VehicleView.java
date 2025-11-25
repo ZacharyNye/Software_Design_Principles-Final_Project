@@ -12,5 +12,7 @@ public class VehicleView {
     public void displayVehicle(Vehicle vehicle) {
         System.out.println("Car Type: " + vehicle.getType());
         System.out.println("Horsepower: " + vehicle.getHorsePower());
+        System.out.println("Fuel Used For 100 Miles: " + vehicle.computeFuelUsage(100));
     }
 }
+
