@@ -7,6 +7,9 @@
 package edu.neumont.csc360;
 
 import edu.neumont.csc360.controller.VehicleController;
+import edu.neumont.csc360.model.SportsCar;
+import edu.neumont.csc360.model.Vehicle;
+import edu.neumont.csc360.strategy.SportFuelStrategy;
 
 public class main {
     public static void main(String[] args) {
@@ -14,6 +17,18 @@ public class main {
         controller.createAndShowVehicle("Sedan");
         controller.createAndShowVehicle("Truck");
         controller.createAndShowVehicle("SportsCar");
+
+        System.out.println();
+        System.out.println();
+
+        Vehicle sportsCar = new SportsCar();
+        sportsCar.setFuelStrategy(new SportFuelStrategy());
+        controller.addUpgrade(sportsCar, "nitrous");
+
+        System.out.println();
+        System.out.println();
+
+        controller.addUpgrade(sportsCar, "shocks");
     }
 }
 
