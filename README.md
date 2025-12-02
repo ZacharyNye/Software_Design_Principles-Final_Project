@@ -25,8 +25,22 @@ This update demonstrates the Strategy Design Pattern.
 The Interface FuelStrategy creates a base line the prevents hardcoding information, used by both TruckFuelStrategy and SportFuelStrategy. Different vehicles consume fuel differently.
 This allows vehicle behavior to change at runtime and keeps the system open for modification but closed for changes (Open/Closed Principle). Which we slightly went over today in class.
 
-Benefefits of Strategy Pattern
+Benefits of Strategy Pattern
 
 Easier expansion, New cars or fuel behaviors can be added without changing existing code.
 
 Separation of concerns, Vehicle creation and behavior logic are modular.
+
+# 12/1/2025 Updates
+This update demonstrates the Decorator Design Pattern.
+This is used to extend vehicle functionality without modifying the original classes.
+This pattern wraps a vehicle inside an upgrade class that adds new behavior.
+
+Benefits of Decorator Pattern
+
+Vehicles gain new features without modification to main class
+
+Upgrades can be applied, removed, and stacked
+
+Clean and modular design
+
